@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Final Year Project!!!</title>
+        <script>
+        function GetArduinoInputs()
+        {
+            nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function()
+            {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        if (this.responseXML != null) {
+                            // extract XML data from XML file (containing switch states and analog value)
+                            document.getElementById("a").innerHTML =
+                                this.responseXML.getElementsByTagName('a')[0].childNodes[0].nodeValue;
+                            document.getElementById("b").innerHTML =
+                                this.responseXML.getElementsByTagName('b')[0].childNodes[0].nodeValue;
+	                        document.getElementById("c").innerHTML =
+                                this.responseXML.getElementsByTagName('c')[0].childNodes[0].nodeValue;
+	                        document.getElementById("d").innerHTML =
+                                this.responseXML.getElementsByTagName('d')[0].childNodes[0].nodeValue;
+	                        document.getElementById("e").innerHTML =
+                                this.responseXML.getElementsByTagName('e')[0].childNodes[0].nodeValue;
+	                        document.getElementById("f").innerHTML =
+                                this.responseXML.getElementsByTagName('f')[0].childNodes[0].nodeValue;
+	                        document.getElementById("g").innerHTML =
+                                this.responseXML.getElementsByTagName('g')[0].childNodes[0].nodeValue;
+	                        document.getElementById("h").innerHTML =
+                                this.responseXML.getElementsByTagName('h')[0].childNodes[0].nodeValue;
+                        }
+                    }
+                }
+            }
+            request.open("GET", "ajax_inputs" + nocache, true);
+            request.send(null);
+            setTimeout('GetArduinoInputs()', 1000);
+        }
+		function On_a()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "On_a" + nocache, true);
+            request.send(null);
+		}
+	    function On_b()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "On_b" + nocache, true);
+            request.send(null);
+		}
+	    function On_c()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "On_c" + nocache, true);
+            request.send(null);
+		}
+	    function On_d()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "On_d" + nocache, true);
+            request.send(null);
+		}
+	    function On_e()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "On_e" + nocache, true);
+            request.send(null);
+		}
+	    function On_f()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "On_f" + nocache, true);
+            request.send(null);
+		}
+	    function On_g()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "On_g" + nocache, true);
+            request.send(null);
+		}
+	    function On_h()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "On_h" + nocache, true);
+            request.send(null);
+		}
+	    function Off_a()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "Off_a" + nocache, true);
+            request.send(null);
+		}
+	    function Off_b()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "Off_b" + nocache, true);
+            request.send(null);
+		}
+	    function Off_c()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "Off_c" + nocache, true);
+            request.send(null);
+		}
+	    function Off_d()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "Off_d" + nocache, true);
+            request.send(null);
+		}
+	    function Off_e()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "Off_e" + nocache, true);
+            request.send(null);
+		}
+	    function Off_f()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "Off_f" + nocache, true);
+            request.send(null);
+		}
+	    function Off_g()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "Off_g" + nocache, true);
+            request.send(null);
+		}
+	    function Off_h()
+		{
+			nocache = "&nocache=" + Math.random() * 1000000;
+            var request = new XMLHttpRequest();
+			request.open("GET", "Off_h" + nocache, true);
+            request.send(null);
+		}
+
+    </script>
+    </head>
+    <body style="background-color: cornsilk; font-family: cursive; " onload="GetArduinoInputs()">
+        <h1 style="font-family: Helvetica ,sans-serif;color: darkgreen; text-shadow: 1px 2px 2px black;">Welcome to Home Automation ! </h1>
+        <p> Light<em>&nbsp(connected in Pin 0)</em>: &nbsp<span id="a" style="color: darkorange"></span>&nbsp
+        <button type="button" onclick="On_a()">On </button>
+        <button type="button" onclick="Off_a()">Off </button></p>
+        <p>  Fan1<em>&nbsp(connected in Pin 1)</em>: &nbsp</em><span id ="b" style="color: darkorange"></span>
+        <button type="button" onclick="On_b()">On </button>
+        <button type="button" onclick="Off_b()">Off </button></p>
+	    <p>  Fan2<em>&nbsp(connected in Pin 2)</em>: &nbsp<span id ="c" style="color: darkorange"></span>
+	    <button type="button" onclick="On_c()">On </button>
+	    <button type="button" onclick="Off_c()">Off </button></p>
+	    <p>  Fan3<em>&nbsp(connected in Pin 3)</em>: &nbsp<span id ="d" style="color: darkorange"></span>
+	    <button type="button" onclick="On_d()">On </button>
+	    <button type="button" onclick="Off_d()">Off </button></p>
+	    <p>  Fan4<em>&nbsp(connected in Pin 4)</em>: &nbsp<span id ="e" style="color: darkorange"></span>
+	    <button type="button" onclick="On_e()">On </button>
+	    <button type="button" onclick="Off_e()">Off </button></p>
+	    <p>  Fan5<em>&nbsp(connected in Pin 5)</em>: &nbsp<span id ="f" style="color: darkorange"></span>
+	    <button type="button" onclick="On_f()">On </button>
+	    <button type="button" onclick="Off_f()">Off </button></p>
+	    <p>  Fan6<em>&nbsp(connected in Pin 6)</em>: &nbsp<span id ="g" style="color: darkorange"></span>
+	    <button type="button" onclick="On_g()">On </button>
+	    <button type="button" onclick="Off_g()">Off </button></p>
+	    <p>  Fan7<em>&nbsp(connected in Pin 7)</em>: &nbsp<span id ="h" style="color: darkorange"></span>
+	    <button type="button" onclick="On_h()">On </button>
+	    <button type="button" onclick="Off_h()">Off </button></p>
+	    <p style="position: fixed; right: 3px;bottom: 3px; color: blue;">Developed by Anindya</p>
+    </body>
+</html>
